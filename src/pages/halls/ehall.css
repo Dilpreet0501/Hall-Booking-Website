@@ -1,0 +1,72 @@
+/* ehall.css */
+
+/* Base styles for larger screens */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+  }
+  
+  .heading {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .ehall {
+    font-size: 24px;
+    font-weight: bold;
+    /* height:100px; */
+  }
+  
+  .image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .img {
+    max-width: 30vmax;
+    height: 25vmax;
+  }
+  
+  /* Responsive styles for smaller screens (e.g., tablets and mobile) */
+  @media screen and (max-width: 768px) {
+    .main {
+      flex-direction: row;
+    }
+  
+    .heading, .image {
+      flex: none;
+    }
+  
+    .ehall {
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .ehall {
+      font-size: 18px;
+    }
+  }
+  .click{
+    height:30%;
+    width:20%;
+    font-size: 26px;
+    /* padding: 10px 25px; */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #022a1c;
+    border: none;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+.click:hover {background-color:rgb(29, 90, 29)}
+  
+  .click:active {
+    background-color: #126715;
+    transform: translateY(4px);
+  }
