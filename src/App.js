@@ -5,6 +5,8 @@ import EHall from './pages/halls/Ehall';
 import React from 'react';
 import Booking from './components/Booking/Booking';
 import Form from './pages/Form';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Route path="/hall" element={<EHall/>}/>
       <Route path="/form" element={<Form/>}/>
       <Route path="/booking" element={<Booking/>}/>
+      <Route path="/login" element={<Login/>} />
+      <Route path="/register" element={<Register/>}/>
       </Routes>
       </BrowserRouter>
   );
