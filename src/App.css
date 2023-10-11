@@ -85,8 +85,10 @@
 
 }
 a{
-  color: #007bff;
   text-decoration: none;
+}
+.lr{
+  color: #007bff;
 }
 .form-container button {
   width: 100%;
@@ -111,7 +113,9 @@ a{
   font-size: 20px;
 }
 
-
+.linkcol{
+  color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

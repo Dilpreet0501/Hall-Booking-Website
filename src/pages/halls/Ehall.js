@@ -13,7 +13,7 @@ function Ehall() {
             <div className='image'>
                 <img className='img' src={ehallimage} alt='E-hallImage'/>
             </div>
-            <button className="click" ><Link to="/form">Book Now!</Link></button>
+            <button className="click" ><Link to="/form"><span className="linkcol">Book Now</span></Link></button>
         </div>
     </div>
   )

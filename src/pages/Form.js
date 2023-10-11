@@ -20,7 +20,7 @@ function Form(props) {
         <input type="text" className="entry"/>
 
         <label className="heading">Select available date and time slots</label>
-        <button type="submit"><Link to="/booking" >Click to open booking calendar</Link></button>
+        <button type="submit"><Link to="/booking" ><span className='linkcol'>Click to open booking calendar</span></Link></button>
         
         <label className="disp_date"> Date</label>
         <input type="text" name="datedisp" className="date_final" value={JSON.parse(localStorage.getItem('date'))} />
