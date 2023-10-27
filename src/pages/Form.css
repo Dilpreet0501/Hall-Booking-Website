@@ -1,10 +1,16 @@
 /* Form.css */
 
 /* Default styling for form */
+.form_class{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .f1 {
   max-width: 400px;
-  margin: 150px;
-  margin-left: 500px;
+  /* margin-left: 500px; */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -28,17 +34,25 @@
   box-sizing: border-box;
 }
 
+.linkcol{
+  padding: 10px 20px;
+}
+
 /* Button style */
 button[type="submit"] {
   background-color: #007BFF;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   margin-top: 10px;
   border-radius: 4px;
   cursor: pointer;
   width:100%;
   height: auto;
+}
+
+.disp_date, .disp_time, .heading{
+  margin-top: 4px;
 }
 
 /* Responsive styles for small screens */
