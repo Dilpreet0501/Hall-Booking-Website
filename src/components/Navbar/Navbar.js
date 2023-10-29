@@ -4,7 +4,6 @@ import "./NavbarStyles.css"
 import React, {useState } from 'react'
 
 import {FaBars, FaTimes} from "react-icons/fa";
-// import Hall from "../pages/hall/Hall";
 
 const Navbar = () => {
 
@@ -19,18 +18,20 @@ const Navbar = () => {
             setColor(false);
         }
     };
+    function change(){
+        window.location.href='/';
+        localStorage.clear();
+    }
 
     window.addEventListener("scroll",changeColor);
-
-
   return (
     <div className={color?"header-bg":"header-bg"}>
         <ul className={click?"nav-menu active":"nav-menu"}>
             <li>
-                <Link to="/">Create Booking</Link>
-            </li>
-            <li>
                 <Link to="{AllBookings}">All Current Bookings</Link>
+            </li>
+            <li onClick={change}>
+            login
             </li>
         </ul>
         <div className="hamburger" onClick={handleClick}>
