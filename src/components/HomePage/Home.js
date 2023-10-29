@@ -11,7 +11,7 @@ function Home() {
     return (
     <>
       {loggedIn ? (
-        <div>
+        <div className="back">
           <Navbar />
           <div className="allhalls">
             <p className="display">All Halls</p>

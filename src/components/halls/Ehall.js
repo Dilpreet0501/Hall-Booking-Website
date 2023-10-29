@@ -1,5 +1,5 @@
 import React from 'react'
-import ehallimage from "./ehallimg.png"
+import ehallimage from "../../assets/ehallimg.png"
 import { Link } from "react-router-dom"
 import "./ehall.css"
 

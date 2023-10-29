@@ -30,7 +30,7 @@ function Login() {
         "770665074123-4kj7kvh4bh7f3aol6hs1g0ini22ps0ah.apps.googleusercontent.com",
       callback: handleCallbackResponse,
     });
-    google.accounts.id.renderButton(document.getElementById("signinDiv"), {});
+    google.accounts.id.renderButton(document.getElementById("signinDiv"),{});
   }, []);
 
   return (

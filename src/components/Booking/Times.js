@@ -2,9 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import {  useNavigate } from 'react-router-dom';
 
-
-
-
 const time = ['10:00AM-12:00PM', '2:00PM-4:00PM', '5:00PM-7:00PM'];
 
 function Times(props) {
@@ -22,8 +19,6 @@ function Times(props) {
    
    alert("You want to book e-hall on "+ props.date.toDateString()+ " for slot "+ e.target.innerText);
    navigate("/form");
-   
-   
 }
   
   return (
