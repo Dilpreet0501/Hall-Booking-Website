@@ -31,7 +31,7 @@ const Navbar = () => {
                 <Link to="{AllBookings}">All Current Bookings</Link>
             </li>
             <li onClick={change}>
-            login
+            Logout
             </li>
         </ul>
         <div className="hamburger" onClick={handleClick}>

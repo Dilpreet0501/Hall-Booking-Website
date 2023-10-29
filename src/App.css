@@ -167,3 +167,8 @@ a{
     font-size: 28px;
   }
 }
+
+li{
+  color: white;
+  cursor: pointer;
+}

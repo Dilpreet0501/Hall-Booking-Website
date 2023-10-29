@@ -8,8 +8,7 @@ function Home() {
   useEffect(() => {
     if (localStorage.getItem("SessionVariable") === null) setLoggedIn(false);
   }, []);
-  console.log(loggedIn);
-  return (
+    return (
     <>
       {loggedIn ? (
         <div>
@@ -20,7 +19,7 @@ function Home() {
           </div>
         </div>
       ) : (
-        <div>IMPOSTER</div>
+        window.location.href = '/'
       )}
     </>
   );

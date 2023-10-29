@@ -1,30 +1,24 @@
 import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
-import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "../../App.css";
-const authorised_mail = [
-  "aditya.prasad2002@gmail.com",
-  "adityax.121003@gmail.com",
-];
+import mail from './authorised_mail.json';
 
 function Login() {
-  const [verified, setVerified] = useState(false);
-  const [user, setUser] = useState({});
 
   function handleCallbackResponse(response) {
     var decoded = jwt_decode(response.credential);
-    setUser(decoded);
+    var verified = false;
     if (decoded.email_verified) {
-      for (var i = 0; i < authorised_mail.length; i++) {
-        if (decoded.email === authorised_mail[i]) {
-          setVerified(true);
-          localStorage.setItem('SessionVariable', 1);
-          window.location.href = '/home'
+      for (var i = 0; i < mail.authorised_mail.length; i++) {
+        if (decoded.email === mail.authorised_mail[i]) {
+          verified = true;
+          localStorage.setItem("SessionVariable", 1);
+          window.location.href = "/home";
           break;
         }
+      }
+      if (!verified) {
+        alert("Login with correct Email");
       }
     }
   }
@@ -36,8 +30,7 @@ function Login() {
         "770665074123-4kj7kvh4bh7f3aol6hs1g0ini22ps0ah.apps.googleusercontent.com",
       callback: handleCallbackResponse,
     });
-    google.accounts.id.renderButton(document.getElementById("signinDiv"), {
-    });
+    google.accounts.id.renderButton(document.getElementById("signinDiv"), {});
   }, []);
 
   return (
@@ -48,8 +41,7 @@ function Login() {
           <div className="form-container">
             <h1>Sign-in</h1>
             <div id="signinDiv"></div>
-            <div>
-            </div>
+            <div></div>
           </div>
         </div>
       </div>

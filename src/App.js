@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/HomePage/Home";
-import EHall from "./components/halls/Ehall";
 import React from "react";
 import Booking from "./components/Booking/Booking";
 import Form from "./components/Form/Form";
