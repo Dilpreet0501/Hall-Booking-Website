@@ -3,19 +3,25 @@ import ehallimage from "../../assets/ehallimg.png"
 import { Link } from "react-router-dom"
 import "./ehall.css"
 
+function Card(props){
+  return(
+    <div className='card'>
+      <div className='card_body'>
+      <h2 className='card_title'>{props.title}</h2>
+        <img src={props.img}/>
+      </div>
+        <button className='card_button'><Link to="/form">Book Now!</Link></button>
+    </div>
+  )
+}
 function Ehall() {
   return (
-    <div>
-        <div className='main'>
-            <div className='heading'>
-                <p className='ehall'>E-Hall</p>
-            </div>
-            <div className='image'>
-                <img className='img' src={ehallimage} alt='E-hallImage'/>
-            </div>
-            <button className="click" ><Link to="/form"><span className="linkcol">Book Now</span></Link></button>
-        </div>
-    </div>
+    <div className='all'>
+       <Card title="E-hall" img={ehallimage}/>
+       <Card title="E-hall" img={ehallimage}/>
+       <Card title="E-hall" img={ehallimage}/>
+       <Card title="E-hall" img={ehallimage}/>
+       </div>
   )
 }
 

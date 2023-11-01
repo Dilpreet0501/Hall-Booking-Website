@@ -15,7 +15,9 @@ function Home() {
           <Navbar />
           <div className="allhalls">
             <p className="display">All Halls</p>
-            <Ehall />
+            <div className="options">
+            <Ehall/>
+            </div>
           </div>
         </div>
       ) : (
