@@ -1,11 +1,25 @@
 /* Form.css */
 
 /* Default styling for form */
-.form_class{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.form{
   min-height: 100vh;
+  background: url('https://cutewallpaper.org/28/crowd-background-wallpaper-images/497626052.jpg');
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: end;
+}
+
+.form-title{
+  color: white;
+  text-align: left;
+  font-size: 80px;
+  display: flex;
+  align-items:flex-start;
+  justify-content:left;
+  padding-right: 48px;
 }
 
 .times{
@@ -16,34 +30,33 @@
 }
 
 .f1 {
-  max-width: 400px;
-  /* margin-left: 500px; */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  min-width: 400px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px 20px 20px 20px;
+  border-radius: 8px;
   background-color: #fff;
-  margin: 0.5em;
+  margin: 8px;
 }
 
 /* Heading style */
 .heading {
   font-weight: bold;
-  margin: 10px 0;
+  /* margin: 10px 0; */
 }
 
 /* Input field style */
 .entry {
   width: 100%;
   padding: 10px;
-  margin: 5px 0;
+  /* margin: 5px 0; */
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-.linkcol{
-  padding: 10px 20px;
 }
 
 /* Button style */
@@ -51,7 +64,7 @@ button[type="submit"] {
   background-color: #007BFF;
   color: #fff;
   border: none;
-  /* padding: 10px 20px; */
+  padding: 10px 20px;
   margin-top: 10px;
   border-radius: 4px;
   cursor: pointer;
@@ -59,30 +72,30 @@ button[type="submit"] {
   height: auto;
 }
 
-.disp_date, .disp_time, .heading{
-  margin-top: 20px;
-}
-
 .react-calendar{
   border-radius: 8px;
   padding: 4px;
 }
 
-/* Responsive styles for small screens */
-@media (max-width: 600px) {
-  .f1 {
-    max-width: 100%;
-    margin: 0;
-    padding: 10px;
-    border: none;
-    box-shadow: none;
+@media screen and (max-width:1000px) {
+  .form{
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    /* font-size: 24px; */
   }
-
-  .heading {
-    font-size: 18px;
+  .form-title{
+    font-size: 48px;
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 20px;
   }
-
-  button[type="submit"] {
-    font-size: 16px;
+  .f1{
+    width: 60vw;
+    height: 60vh;
+    font-size: 24px;
+  }
+  .entry{
+    font-size: x-large;
   }
 }

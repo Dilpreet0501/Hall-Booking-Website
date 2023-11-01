@@ -18,7 +18,12 @@ function Form(props) {
 
   return (
     <>
-    {loggedIn ? (<div className="form_class">
+    {loggedIn ? (
+      // <div className="form"></div>
+
+      <div className="form">
+        {/* <div className="form_class"> */}
+      <div className="calendar-header form-title">Fill in the form to book an event</div>
       <form className="f1">
         <label className="heading">Name</label>
         <input type="text" name="name" className="entry" />
@@ -66,7 +71,10 @@ function Form(props) {
 
         <button type="submit" style={{padding:'10px 0', backgroundColor:'green'}}>Request Booking</button>
       </form>
-    </div>): (
+    {/* </div> */}
+      </div>
+
+    ): (
         window.location.href = '/'
       )}
     </>
