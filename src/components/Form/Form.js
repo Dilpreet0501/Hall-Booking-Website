@@ -3,6 +3,7 @@ import "./Form.css";
 import { Link } from "react-router-dom";
 import Calendar from "react-calendar"
 import Time from "../Booking/Time";
+import 'react-calendar/dist/Calendar.css';
 
 function Form(props) {
 
@@ -28,24 +29,21 @@ function Form(props) {
         <label className="heading">Event Name</label>
         <input type="text" className="entry" />
 
-        <label className="heading">Select available date and time slots</label>
         <button type="submit">
           <Link to="/booking">
-            <div className="linkcol">Click to open booking calendar</div>
+            <div className="linkcol">Click to open event calendar</div>
           </Link>
         </button>
 
-        <div className="disp_date"> Date</div>
-        {/* <input
-          type="text"
-          name="datedisp"
-          className="date_final"
-          value={JSON.parse(localStorage.getItem("date"))}
-        /> */}
+        {/* <div className="heading"> Date</div> */}
+        <div className="heading" style={{margin:'12px 0'}}>Select available date and time slots</div>
+        
+        <div style={{width:'100%', display:'flex', alignItems:'center', justifyContent:'center'}}>
         <Calendar onChange={setDate} value={date} onClickDay={()=>setShowTime(true)}/>
+        </div>
 
         {showTime && 
-        <div className="calendar-header" style={{fontSize:'16px'}}>
+        <div className="calendar-header">
           <p>
             <span>Selected date:</span>{' '} {date.toDateString()}
           </p>
@@ -53,11 +51,11 @@ function Form(props) {
         </div>
         }
 
-        <br></br>
-        <div className="disp_time">Time</div>
+        {/* <br></br> */}
+        <div className="heading">Time</div>
         <input
           type="text"
-          className="time_final"
+          className="entry"
           value={JSON.parse(localStorage.getItem("time"))}
         />
         <br></br>
@@ -66,7 +64,7 @@ function Form(props) {
         </div>
         <input type="email" name="user_email" className="entry" />
 
-        <button className="submit">Request Booking</button>
+        <button type="submit" style={{padding:'10px 0', backgroundColor:'green'}}>Request Booking</button>
       </form>
     </div>): (
         window.location.href = '/'

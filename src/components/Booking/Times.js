@@ -23,11 +23,11 @@ function Times(props) {
   
   return (
     <>
-      <div className="times">
+      <div className="times" >
         {time.map((times, index) => {
           return (
             <div key={index}>
-              <button onClick={(e) => displayInfo(e)}> {times} </button>
+              <button onClick={(e) => displayInfo(e)} className='linkcol' type='submit'> {times} </button>
             </div>
           );
         })}

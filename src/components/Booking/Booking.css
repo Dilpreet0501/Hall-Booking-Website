@@ -9,8 +9,8 @@
 
 .calendar-header{
   margin: 1rem;
-  font-size: 36px;
-  font-family:monospace;
+  text-align: center;
+  font-size: 20px;
 }
 
 .calendar-header p{
