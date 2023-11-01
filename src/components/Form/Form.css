@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  margin: 0.5rem 0;
 }
 
 .f1 {
@@ -52,7 +53,7 @@ button[type="submit"] {
 }
 
 .disp_date, .disp_time, .heading{
-  margin-top: 4px;
+  margin-top: 20px;
 }
 
 /* Responsive styles for small screens */

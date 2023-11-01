@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Form.css";
 import { Link } from "react-router-dom";
+import Calendar from "react-calendar"
+import Time from "../Booking/Time";
 
 function Form(props) {
+
+  const [date, setDate]=useState(new Date());
+
+  const [showTime, setShowTime]=useState(false);
   
   const [loggedIn, setLoggedIn] = useState(true);
   useEffect(() => {
@@ -30,12 +36,23 @@ function Form(props) {
         </button>
 
         <div className="disp_date"> Date</div>
-        <input
+        {/* <input
           type="text"
           name="datedisp"
           className="date_final"
           value={JSON.parse(localStorage.getItem("date"))}
-        />
+        /> */}
+        <Calendar onChange={setDate} value={date} onClickDay={()=>setShowTime(true)}/>
+
+        {showTime && 
+        <div className="calendar-header" style={{fontSize:'16px'}}>
+          <p>
+            <span>Selected date:</span>{' '} {date.toDateString()}
+          </p>
+          <Time showTime={showTime} date={date}/>
+        </div>
+        }
+
         <br></br>
         <div className="disp_time">Time</div>
         <input
