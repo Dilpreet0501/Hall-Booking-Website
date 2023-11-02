@@ -28,7 +28,7 @@ const Navbar = () => {
     <div className={color?"header-bg":"header-bg"}>
         <ul className={click?"nav-menu active":"nav-menu"}>
             <li>
-                <Link to="{AllBookings}">All Current Bookings</Link>
+                <Link to="{AllBookings}">All Events</Link>
             </li>
             <li onClick={change}>
             Logout
