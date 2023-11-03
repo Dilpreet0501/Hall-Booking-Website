@@ -5,6 +5,10 @@ import Calendar from "react-calendar"
 import Time from "../Booking/Time";
 import 'react-calendar/dist/Calendar.css';
 
+function prevent(e){
+  e.preventDefault();
+}
+
 function Form(props) {
 
   const [date, setDate]=useState(new Date());
@@ -24,7 +28,7 @@ function Form(props) {
       <div className="form">
         {/* <div className="form_class"> */}
       <div className="calendar-header form-title">Fill in the form to book an event</div>
-      <form className="f1">
+      <form className="f1" onSubmit={prevent}>
         <label className="heading">Name</label>
         <input type="text" name="name" className="entry" />
 
